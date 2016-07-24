@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace pz7
 {
-    class Smok
+    class Smok : Postav
     {
+
     }
 }

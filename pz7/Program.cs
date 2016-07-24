@@ -21,6 +21,15 @@ namespace pz7
             Lucznik legolas = new Lucznik("Legolas", 20, 100, 4, 25, 5, new Zycie { aktualne = 60, maksymalne = 60 }, new Mana(20, 20), 40, Odpornosci.Woda, 20, 30);
             Console.WriteLine(legolas.ToString());
             legolas.obrazeniaOdniesione(30, Odpornosci.Ogien);
+            Console.WriteLine("Zaczynamy przygode");
+            List<Postav> druzyna = new List<Postav>
+            {
+                new Wojownik("Aragorn"),
+                new Lucznik("Legolas"),
+                new Czarownik("Gandalf")
+            };
+            Smok smok = new Smok { imie="Wawelski", doswiadczenie=99, inteligencja=90, mana=new Mana(500,500),obrazenia=100, odpornosci=Odpornosci.Ogien, Pancerz=500, poziom=99, sila=99, zrecznosc=50, zycie=new Zycie { aktualne=500, maksymalne=500} };
+
             Console.ReadKey();
         }
     }
