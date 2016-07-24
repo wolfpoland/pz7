@@ -1,0 +1,6 @@
+c:\users\pacio_000\documents\visual studio 2015\Projects\pz7\pz7\bin\Debug\pz7.exe.config
+C:\Users\pacio_000\documents\visual studio 2015\Projects\pz7\pz7\obj\Debug\pz7.csprojResolveAssemblyReference.cache
+C:\Users\pacio_000\documents\visual studio 2015\Projects\pz7\pz7\bin\Debug\pz7.exe
+C:\Users\pacio_000\documents\visual studio 2015\Projects\pz7\pz7\bin\Debug\pz7.pdb
+C:\Users\pacio_000\documents\visual studio 2015\Projects\pz7\pz7\obj\Debug\pz7.exe
+C:\Users\pacio_000\documents\visual studio 2015\Projects\pz7\pz7\obj\Debug\pz7.pdb
