@@ -6,8 +6,21 @@ using System.Threading.Tasks;
 
 namespace pz7
 {
-    class Smok : Postav
+    public  partial class Smok : Postav
     {
-
+       partial  void Zioniecie();
+        public void Zonij()
+        {
+            Zioniecie();
+        }
+    }
+     public  partial class Smok: Postav
+    {
+       partial  void Zioniecie()
+        {
+            this.mana.aktualne -= 100;
+            Console.WriteLine("Intensywne zioniecie smoka");
+        }
+      
     }
 }

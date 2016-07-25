@@ -41,6 +41,8 @@ namespace pz7
             wo.ReJunevation();
             Console.WriteLine("Aragorn po uzyciu: ");
             Console.WriteLine(wo.ToString());
+            smok.Zonij();
+            wo.dowiadczenieOIle(3500);
             Console.ReadKey();
         }
     }

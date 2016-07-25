@@ -13,5 +13,19 @@ namespace pz7
             p.zycie.aktualne = p.zycie.maksymalne;
             p.mana.aktualne = p.mana.maksymalne;
         }
+        public static void Zyje(this Postav p)
+        {
+            if (p.zycie.aktualne <= 0)
+            {
+                Console.WriteLine("{0} nie zyje", p.imie);
+            }
+        }
+        public static void dowiadczenieOIle(this Postav p,int ile)
+        {
+            int iloesc = 1000*p.poziom;
+            p.doswiadczenie += ile;
+            int poziom = p.doswiadczenie / 1000;
+            Console.WriteLine("Obecny poziom: {0} ",poziom);
+        }
     }
 }
