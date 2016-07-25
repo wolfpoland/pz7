@@ -42,7 +42,7 @@ namespace pz7
             if (prawdo <= this.unik)
             {
                 Console.WriteLine("Zaszedl unik ");
-                dodage(this);
+               // dodage(this);
 
             }
             else

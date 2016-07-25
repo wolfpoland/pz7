@@ -29,7 +29,18 @@ namespace pz7
                 new Czarownik("Gandalf")
             };
             Smok smok = new Smok { imie="Wawelski", doswiadczenie=99, inteligencja=90, mana=new Mana(500,500),obrazenia=100, odpornosci=Odpornosci.Ogien, Pancerz=500, poziom=99, sila=99, zrecznosc=50, zycie=new Zycie { aktualne=500, maksymalne=500} };
-
+            Console.WriteLine("Smok, atakuje aragorna");
+            var w= druzyna.Select(k=>k).Where(k => k.imie.Equals("Aragorn")).ToArray();
+            Wojownik w1 =(Wojownik) druzyna.Single(k => k.imie.Equals("Aragorn"));
+            Console.WriteLine("w1: "+w1.ToString());
+            Wojownik wo =new Wojownik((Wojownik)w[0]);
+            
+            wo.obrazeniaOdniesione(100, Odpornosci.Fizyczne);
+            Console.WriteLine(wo.ToString());
+            Console.WriteLine("Aragorn uzywa potiona");
+            wo.ReJunevation();
+            Console.WriteLine("Aragorn po uzyciu: ");
+            Console.WriteLine(wo.ToString());
             Console.ReadKey();
         }
     }

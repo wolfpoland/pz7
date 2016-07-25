@@ -52,6 +52,7 @@
     <Compile Include="Postav.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rozserzam.cs" />
     <Compile Include="Smok.cs" />
     <Compile Include="TypyCzarow.cs" />
     <Compile Include="Wojownik.cs" />

@@ -15,6 +15,16 @@ namespace pz7
         public Postav(string imie)
         {
             this.imie = imie;
+            zycie = new Zycie { aktualne = 50, maksymalne = 50 };
+            mana = new Mana(50, 50);
+            poziom = 1;
+            sila = 1;
+            inteligencja = 1;
+            zrecznosc = 1;
+            doswiadczenie = 1;
+            obrazenia = 1;
+            odpornosci = Odpornosci.Fizyczne;
+            Pancerz = 10;
            
         }
         public Postav(string imie, int poziom, int doswiadczenie, int sila, int zrecznosc,int inteligencja, Zycie zycie,Mana mana, int obrazenia, Odpornosci odpornosci,int Pancerz)
@@ -40,7 +50,8 @@ namespace pz7
         public int sila { get; set; }
         public int zrecznosc { get; set; }
         public int inteligencja { get; set; }
-        public Zycie zycie
+        public Zycie zycie { get; set; }
+        public Zycie Zycie
         {
             get
             {

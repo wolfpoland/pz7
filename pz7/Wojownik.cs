@@ -34,7 +34,29 @@ namespace pz7
             base.mana.aktualne = 5;
 
         }
-        //    public override 
+        public Wojownik(Wojownik w)
+        {
+            this.imie = w.imie;
+            this.doswiadczenie = w.doswiadczenie;
+            this.inteligencja = w.inteligencja;
+            this.obrazenia = w.obrazenia;
+            this.poziom = w.poziom;
+            this.sila = w.sila;
+            this.zrecznosc = w.zrecznosc;
+         //   this.zycie.maksymalne = w.zycie.maksymalne;
+           // this.zycie.aktualne = w.zycie.aktualne;
+            this.zycie = new Zycie { maksymalne = w.zycie.maksymalne, aktualne = w.zycie.aktualne };
+         //   this.mana.maksymalne = w.mana.maksymalne;
+        //    this.mana.aktualne = w.mana.aktualne;
+            this.mana = new Mana(w.mana.aktualne, w.mana.maksymalne);
+            
+        }
+        public override string ToString()
+        {
+            String tmp = base.ToString();
+            Console.WriteLine(tmp);
+            return base.ToString();
+        }
         public override int levelUp()
         {
             poziom = base.levelUp();
