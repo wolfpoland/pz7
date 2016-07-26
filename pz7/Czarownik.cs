@@ -119,6 +119,9 @@ namespace pz7
 
         }
 
-        
+        public void Medytacja()
+        {
+            mana.aktualne = mana.maksymalne;
+        }
     }
 }

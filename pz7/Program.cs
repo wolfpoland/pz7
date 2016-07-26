@@ -8,9 +8,10 @@ namespace pz7
 {
     class Program
     {
+        static Druzyna  d = new Druzyna();
         static void Main(string[] args)
         {
-            Czarownik cz = new Czarownik {imie="Gandalf",doswiadczenie=15, inteligencja=5,mana=new Mana(20,20),obrazenia=10,odpornosci=Odpornosci.Ogien,Pancerz=5,sila=5,poziom=5,zrecznosc=2,zycie=new Zycie {aktualne=35, maksymalne=35 } };
+            Czarownik cz = new Czarownik {imie="Gandalf",doswiadczenie=15, inteligencja=5,mana=new Mana(500,500),obrazenia=10,odpornosci=Odpornosci.Ogien,Pancerz=5,sila=5,poziom=5,zrecznosc=2,zycie=new Zycie {aktualne=35, maksymalne=35 } };
             Console.WriteLine(cz.ToString());
             cz.obrazeniaOdniesione(10,Odpornosci.Fizyczne);
             Console.WriteLine("Wojownik: ");
@@ -28,6 +29,7 @@ namespace pz7
                 new Lucznik("Legolas"),
                 new Czarownik("Gandalf")
             };
+            d.dodajCalaDruzyne(druzyna);
             Smok smok = new Smok { imie="Wawelski", doswiadczenie=99, inteligencja=90, mana=new Mana(500,500),obrazenia=100, odpornosci=Odpornosci.Ogien, Pancerz=500, poziom=99, sila=99, zrecznosc=50, zycie=new Zycie { aktualne=500, maksymalne=500} };
             Console.WriteLine("Smok, atakuje aragorna");
             var w= druzyna.Select(k=>k).Where(k => k.imie.Equals("Aragorn")).ToArray();
@@ -41,9 +43,29 @@ namespace pz7
             wo.ReJunevation();
             Console.WriteLine("Aragorn po uzyciu: ");
             Console.WriteLine(wo.ToString());
-            smok.Zonij();
+           
             wo.dowiadczenieOIle(3500);
+            cz.RzucCzar(Czary.Uzdrawiajacy);
+            Console.WriteLine("Czarownik dostal : \n {0}",cz.ToString());
+            cz.RegeneracjaMany(50);
+            smok.atakuj += new EventHandler<Klaska>(atakowanie);
+            smok.Zonij();
+
             Console.ReadKey();
+        }
+
+        
+
+        public static void atakowanie(object sender, Klaska e)
+        {
+            Console.WriteLine("Rozpoczeto obrazenia");
+            List<Postav> druzyna = d.getDruzyna();
+            foreach (Postav item in druzyna)
+            {
+                item.obrazeniaOdniesione(e.intensywnosc, Odpornosci.Ogien);
+                Console.WriteLine("{0} Otryzmal obrazenia o intensywnosci", item.imie);
+                Console.WriteLine("Stan Postaci: \n {0}", item.ToString());
+            }
         }
     }
 }

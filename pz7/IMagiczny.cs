@@ -10,6 +10,7 @@ namespace pz7
     public interface IMagiczny<T> where T: Czarownik
     {
        void RzucCzar(Czary cz, [Optional] Postav atak);
+        void Medytacja();
 
          int Manaakt { get; set; }
          int Manamax { get; set; }

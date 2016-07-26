@@ -13,7 +13,7 @@ namespace pz7
             this.TypCzaru = TypCzaru;
             if(TypCzaru == Czary.Uzdrawiajacy)
             {
-                Mana = 10;
+                Mana = 500;
 
             }
             if (TypCzaru == Czary.Ofensywny)

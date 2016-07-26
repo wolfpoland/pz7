@@ -45,7 +45,9 @@
   <ItemGroup>
     <Compile Include="Czarownik.cs" />
     <Compile Include="Czary.cs" />
+    <Compile Include="Druzyna.cs" />
     <Compile Include="IMagiczny.cs" />
+    <Compile Include="Klaska.cs" />
     <Compile Include="Lucznik.cs" />
     <Compile Include="Mana.cs" />
     <Compile Include="Odpornosci.cs" />
